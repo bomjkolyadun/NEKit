@@ -1193,7 +1193,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36C48D521CF88DED0071804F /* Build configuration list for PBXNativeTarget "NEKit-iOS" */;
 			buildPhases = (
-				36B05A1B1DE4503800074910 /* ShellScript */,
 				36C48D481CF88DED0071804F /* Sources */,
 				36C48D491CF88DED0071804F /* Frameworks */,
 				36C48D4A1CF88DED0071804F /* Headers */,
@@ -1320,19 +1319,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "SWIFT_SDK=`xcrun --show-sdk-path -sdk macosx`\necho SWIFT_SDK is $SWIFT_SDK\nxcrun -sdk macosx swift  ./GenerateCommonCryptoModule.swift $PLATFORM_NAME $PROJECT_DIR\n";
-		};
-		36B05A1B1DE4503800074910 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo Generating $PROJECT_DIR/Frameworks/$(PLATFORM_NAME)/CommonCrypto.framework\nxcrun -sdk macosx swift ./GenerateCommonCryptoModule.swift $PLATFORM_NAME $PROJECT_DIR";
 		};
 		54BD0DA398CF0C5B9E0B9491 /* Set version number */ = {
 			isa = PBXShellScriptBuildPhase;
